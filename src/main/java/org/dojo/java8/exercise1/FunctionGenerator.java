@@ -5,19 +5,26 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoField;
 import java.util.Comparator;
 import java.util.List;
-import java.util.function.*;
+import java.util.function.BiFunction;
+import java.util.function.BinaryOperator;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 public class FunctionGenerator {
 
     public static Function<Integer, Integer> plusOneFunction() {
         //TODO replace with lambda syntax
-        return new Function<Integer, Integer>() {
-
-            @Override
-            public Integer apply(Integer value) {
-                return value + 1;
-            }
-        };
+//        return new Function<Integer, Integer>() {
+//
+//            @Override
+//            public Integer apply(Integer value) {
+//                return value + 1;
+//            }
+//        };
+    	
+    	return (value) -> value + 1; 
     }
 
     public static Predicate<Integer> pairNumberPredicate() {
